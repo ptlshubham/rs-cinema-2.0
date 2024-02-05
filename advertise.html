@@ -153,7 +153,8 @@
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
 
-                <i class="fas fa-solis fa-equals"></i>
+                <!-- <i class="fas fa-solis fa-equals"></i> -->
+                <img src="images/menuicon.png" height="18">
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -431,17 +432,29 @@
                             <div class="bg-white p-4 shadow-sm rounded">
                                 <div class="section-header">
                                     <h5 class="heading-design-h5 mb-4">
-                                        Ask us question
+                                        Contact Us For Advertise
                                     </h5>
                                 </div>
-                                <form>
+                                <form method="post" action="connect.php">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label class="control-label">Your Name <span
                                                         class="required">*</span></label>
                                                 <input class="form-control border-form-control" value=""
-                                                    placeholder="Enter Name" type="text">
+                                                    placeholder="Enter Name" type="text" name="contact-name"
+                                                    id="contact-name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="control-label">Your Company Name <span
+                                                        class="required">*</span></label>
+                                                <input class="form-control border-form-control" value=""
+                                                    placeholder="Enter Compan's Name" type="text" name="cname"
+                                                    id="cname">
                                             </div>
                                         </div>
                                     </div>
@@ -451,7 +464,8 @@
                                                 <label class="control-label">Email Address <span
                                                         class="required">*</span></label>
                                                 <input class="form-control border-form-control " value=""
-                                                    placeholder="ex@gmail.com" type="email">
+                                                    placeholder="ex@gmail.com" type="email" name="contact-email"
+                                                    id="contact-email">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -459,7 +473,8 @@
                                                 <label class="control-label">Phone <span
                                                         class="required">*</span></label>
                                                 <input class="form-control border-form-control" value=""
-                                                    placeholder="Enter Phone" type="number">
+                                                    placeholder="Enter Phone" type="number" name="contact-phone"
+                                                    id="contact-phone">
                                             </div>
                                         </div>
                                     </div>
@@ -468,10 +483,12 @@
                                             <div class="form-group">
                                                 <label class="control-label">Type <span
                                                         class="required">*</span></label><br>
-                                                <input type="radio" id="offscreen" name="offscreen">
-                                                <label for="offscreen">Off-Screen</label>
-                                                <input type="radio" id="onscreen" name="onscreen">
-                                                <label for="onscreen">On-Screen</label><br>
+                                                <input type="radio" name="radio1" id="onscreenadvertise"
+                                                    name="offscreen">
+                                                <label for="offscreen">On-Screen</label>
+                                                <input type="radio" name="radio1" id="offscreenadvertise"
+                                                    name="onscreen">
+                                                <label for="onscreen">Off-Screen</label><br>
                                             </div>
                                         </div>
                                     </div>
@@ -480,15 +497,14 @@
                                             <div class="form-group">
                                                 <label class="control-label">Your Message <span
                                                         class="required">*</span></label>
-                                                <textarea class="form-control border-form-control"></textarea>
+                                                <textarea id="contact-message" name="contact-message"
+                                                    class="form-control border-form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 text-right">
-                                            <button type="button" class="btn btn-outline-primary btn-bg"> Cencel
-                                            </button>
-                                            <button type="button" class="btn btn-primary btn-bg"> Send Message </button>
+                                            <button type="submit" class="btn btn-primary btn-bg"> Submit </button>
                                         </div>
                                     </div>
                                 </form>
